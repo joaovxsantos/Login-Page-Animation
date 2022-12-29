@@ -13,7 +13,7 @@
   font-size: 62.5%;
   --bg-body-color: #252622;
   --bg-container-color: #161718;
-  --color: #00fded;
+  --color-cyan: #00fded;
 }
 
 body {
@@ -32,6 +32,41 @@ body {
   padding: 3rem;
   border-radius: 0.5rem;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.container-page::before {
+  content: "";
+  position: absolute;
+  width: 10rem;
+  height: 140%;
+  background: var(--color-cyan);
+  inset: 1px;
+  margin: auto;
+  animation: led 5s linear infinite alternate;
+}
+
+@keyframes led {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.container-page::after {
+  content: "";
+  position: absolute;
+  background: var(--bg-container-color);
+  inset: 0.3rem;
+}
+
+.content-page {
+  position: relative;
+  z-index: 1;
+  width: 100%;
 }
 
 .content-page h1 {
@@ -39,7 +74,7 @@ body {
   margin-top: 2.5rem;
   margin-bottom: 3rem;
   font-size: 3.6rem;
-  color: var(--color);
+  color: var(--color-cyan);
 }
 
 .input-page {
@@ -49,7 +84,7 @@ body {
 .input-page input {
   background: var(--bg-container-color);
   padding: 0.1rem;
-  border-bottom: solid var(--color) 2px;
+  border-bottom: solid var(--color-cyan) .2rem;
   font-size: 1.7rem;
   transition: 500ms all;
   width: 100%;
@@ -72,7 +107,7 @@ body {
 
 .input-page input:focus,
 .input-page input:valid {
-  background: var(--color);
+  background: var(--color-cyan);
   padding: 0.7rem;
 }
 
@@ -100,7 +135,7 @@ body {
 }
 
 .recovery-page p:last-child {
-  color: var(--color);
+  color: var(--color-cyan);
   opacity: 1;
 }
 
@@ -108,7 +143,7 @@ body {
   padding: 1rem;
   margin-top: 1.5rem;
   width: 25%;
-  background: var(--color);
+  background: var(--color-cyan);
   font-weight: 700;
   border-radius: 0.3rem;
   cursor: pointer;
