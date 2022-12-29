@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  outline: none;
+  border: none;
+}
+
+:root {
+  font-size: 62.5%;
+  --bg-body-color: #252622;
+  --bg-container-color: #161718;
+  --color: #00fded;
+}
+
+body {
+  background: var(--bg-body-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container-page {
+  background: var(--bg-container-color);
+  width: 35rem;
+  height: 35rem;
+  padding: 3rem;
+  border-radius: .5rem;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+.content-page h1 {
+  text-align: center;
+  margin-top: 2.5rem;
+  margin-bottom: 3rem;
+  font-size: 3.6rem;
+  color: var(--color);
+}
+
+.input-page input {
+  background: var(--bg-container-color);
+  padding: .7rem;
+  border-bottom: solid var(--color) 2px;
+  font-size: 1.7rem;
+  transition: 0.5s all;
+  width: 100%;
+}
+
+.input-page [type="text"] {
+  margin-bottom: 3rem;
+}
+
+.input-page input:focus{
+    background: var(--color);
+}
+
+
+.recovery-page{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    color: #ffffff;
+}
+
+.recovery-page p:last-child{
+    color: var(--color);
+}
+
+[type="submit"]{
+    padding: 1rem;
+    margin-top: 1.5rem;
+    width: 25%;
+    background: var(--color);
+    font-weight: 700;
+    border-radius: .3rem;
+    cursor: pointer;
+}
